@@ -1,0 +1,45 @@
+Criar venv:
+python -m pip install --upgrade pip
+pip3 install virtualenv
+python -m venv venv
+.\venv\Scripts\activate.bat
+.\venv\Scripts\python -m pip install --upgrade pip
+pip3 install -r requirements.txt
+
+Entrar na maquina virtual com as depencias instaladas:
+.\venv\Scripts\activate.bat
+
+Criar pastas na raiz do projeto:
+datasets\CIFAR-10\Non-IID-distribution
+
+Rodar arquivo para geracao de dados particionados:
+python src\dataset-process\generate_non_iid_shuffle.py (criar arquivos class-index-test/train)
+
+Rodar arquivos 2 classes original no primeiro grupo:
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\server_update.py (subir o servidor)
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\client-1.py
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\client-2.py
+
+Rodar arquivos 2 classes reduzido em 325 amostras no primeiro grupo:
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand325\server_update_reduced.py (subir o servidor)
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand325\client-1_rand.py
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand325\client-2_rand.py
+
+Rodar arquivos 2 classes reduzido em 1121 amostras no primeiro grupo:
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand1121\server_update_reduced.py (subir o servidor)
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand1121\client-1_rand.py
+python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand1121\client-2_rand.py
+
+
+Para rodar os demais grupos, utilizar o mesmo servidor, e trocar para os seguintes arquivos de clientes nas respectivas pastas:
+
+Segundo Grupo: client-3_rand.py / client-4_rand.py
+Terceiro Grupo: client-5_rand.py / client-6_rand.py
+Quarto Grupo: client-7_rand.py / client-8_rand.py
+Quinto Grupo: client-9_rand.py / client-10_rand.py
+
+
+Modificações por versão atualizada no flower:
+fraction_eval para fraction_evaluate
+localhost 
+config em get_parameters
