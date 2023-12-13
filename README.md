@@ -18,7 +18,7 @@ Este repositório contém os arquivos necessários para a simulação de um apre
 
 -  <i> numpy </i> : Utilizada para operações numéricas eficientes.
 -  <i> pandas</i> : Utilizada para manipulação e análise de dados.
--  <i> scikit-learn</i>: Empregada pa técnicas tradicionais de aprendizado de máquina.ra
+-  <i> scikit-learn</i>: Empregada para técnicas tradicionais de aprendizado de máquina.
 -  <i> tensorflow</i> e <i> keras</i>: Definição e treinamento o modelo no cliente.
 -  <i> flower</i>: Configuração do ambiente de Aprendizado Federado.
 
@@ -42,7 +42,7 @@ Criar os seguintes diretórios na raiz do projeto:
 ``datasets\CIFAR-10\Non-IID-distribution``
 
 
-Depois de criadas as pastas, rodar o seguinte código para criar arquivos class-index-test/train:
+Depois de criadas as pastas, rodar o seguinte código para criar arquivos <i>class-index-test / train</i>:
 ```
 python src\dataset-process\generate_non_iid_shuffle.py
 ```
