@@ -68,7 +68,7 @@ python src\federated-learning-env\Non-IID-clients\Only-2-Classes\Reduced\Rand112
 ```
 
 ### Realizar o treinamento com demais grupos
-Para realizar o treinamento com demais grupos, utilizar os arquivos nomeados com os clientes do respectivo grupo. Utilizar o mesmo servidor do primeiro grupo. Para utilizar amostragem aleatoria, rodar o experimento no diretorio correspondente da amostragem.
+Utilizar os arquivos nomeados com os clientes do respectivo grupo. Utilizar o mesmo servidor do primeiro grupo. Para utilizar amostragem aleatoria, rodar o experimento no diretorio correspondente da amostragem.
 
 
 <i>Segundo Grupo</i>: client-3_rand.py / client-4_rand.py<br>
